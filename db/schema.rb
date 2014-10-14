@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20141014072914) do
 
   create_table "games", force: true do |t|
     t.string   "name"
-    t.string   "genre"
+    t.string   "genre_id"
     t.string   "description"
     t.integer  "release_year"
     t.datetime "created_at"

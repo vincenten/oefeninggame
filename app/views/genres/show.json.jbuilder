@@ -1,1 +1,1 @@
-json.extract! @genre, :id, :name, :description, :created_at, :updated_at
+json.extract! @genre, :id, :genre_id, :name, :description, :created_at, :updated_at
