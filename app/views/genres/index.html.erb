@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Genre</th>
+     <%# <th>Genre</th>%>
       <th>Name</th>
       <th>Description</th>
       <th colspan="3"></th>
@@ -15,10 +15,8 @@
       <tr>
         <%#<td><%= genre.genre_id %><%#</td>%>
         <td><%= genre.name %></td>
-        <td><%= genre.description %></td>
-        <td><%= link_to 'Show', genre %></td>
-        <td><%= link_to 'Edit', edit_genre_path(genre) %></td>
-        <td><%= link_to 'Destroy', genre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to genre.description, genre %></td>
+     
       </tr>
     <% end %>
   </tbody>

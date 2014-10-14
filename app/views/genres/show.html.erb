@@ -14,6 +14,6 @@
   <strong>Description:</strong>
   <%= @genre.description %>
 </p>
-
+<%= link_to 'Destroy', @genre, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
 <%= link_to 'Back', genres_path %>
