@@ -1,27 +1,30 @@
 <h1>Listing genres</h1>
-
+<% @genres.each do |genre| %>
+ <%= link_to genre.name, genre %>
 <table>
-  <thead>
+ <thead>
     <tr>
-     <%# <th>Genre</th>%>
+      <th>Image</th>
       <th>Name</th>
-      
+      <th>Description</th>
+      <th>Release year</th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
-    <% @genres.each do |genre| %>
+   <% genre.games.each do |game| %>
       <tr>
-        <%#<td><%= genre.genre_id %><%#</td>%>
-        <td><%= link_to genre.name, genre %></td>
-      
-     
+        <td><%= image_tag game.image_url, height: '48', width: '48' %></td> 
+        <td><%= game.name %></td>
+        <td><%= game.description %></td>
+        <td><%= game.release_year %></td>
       </tr>
-    <% end %>
+      
+    <% end %> 
   </tbody>
 </table>
-
+<% end %>
 <br>
 
 <%= link_to 'New Genre', new_genre_path %>
